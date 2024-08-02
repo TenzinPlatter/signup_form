@@ -1,0 +1,117 @@
+/* Inconsolata font setup */
+@font-face {
+	font-family: Inconsolata;
+	src: url(fonts/Inconsolata.ttf);
+}
+
+@font-face {
+	font-family: Norse-Bold;
+	src: url(fonts/Norse-Bold.otf);
+}
+
+.inconsolata {
+	font-family: Inconsolata, Serif;
+}
+
+.norse {
+	font-family: Norse-Bold, Serif;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+:root {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+}
+
+.sidebar-container {
+	background-image: url("img/background_leaves.jpg");
+	background-size: 40vw 100vh;
+	height: 100vh;
+	width: 40vw;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+body.content-container {
+	height: 100vh;
+	width: 60vw;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+.sidebar-container > .content-container {
+	padding: 16px 0px;
+	display: flex;
+	color: white;
+	font-size: 10rem;
+	display: flex;
+	gap: 16px;
+	justify-content: center;
+	margin-top: 40%;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-container img {
+	width: 120px;
+	height: 160px;
+}
+
+.header > p {
+	font-size: 1.7rem;	
+	margin: 32px;
+	font-weight: 800;
+} 
+
+.header > p:first-child {
+	margin-top: 128px;
+} 
+
+button[type="submit"] {
+	background: #596D48;
+	margin: 32px;
+	border-radius: 4px;
+	width: 220px;
+	height: 48px;
+	border: none;
+	color: white;
+	font-size: .9rem;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.inputs {
+	display: flex;
+	background: #F0EAD6;
+	padding: 16px 0px;
+}
+
+input {
+	height: 20px;
+	border: 2px solid #E0E2E8;
+}
+
+input:focus {
+	border: 2px solid red;
+}
+
+li {
+	display: flex;
+	flex-direction: column;
+	margin-top: 22px;
+	margin-right: 22px;
+	font-size: 0.9rem;
+}
+
+li:first-child {
+	margin-top: 0px;
+}
