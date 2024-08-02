@@ -21,14 +21,13 @@
 	font-weight: 700;
 }
 
-:root {
+body {
 	padding: 0px;
 	margin: 0px;
 	box-sizing: border-box;
-}
-
-body {
+	font-family: inconsolata;
 	display: flex;
+	background: #FAF9F6;
 }
 
 .sidebar-container {
@@ -83,35 +82,85 @@ button[type="submit"] {
 	border: none;
 	color: white;
 	font-size: .9rem;
+	box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
 }
 
 ul {
 	list-style-type: none;
+	padding: 32px;
+	padding-top: 10px;
 }
 
 .inputs {
 	display: flex;
+	flex-direction: column;
 	background: #F0EAD6;
 	padding: 16px 0px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+	margin-top: 0px;
+}
+
+.main p {
+	background: #F0EAD6;
+	margin-bottom: 0px;
+	padding: 32px;
+	padding-bottom: 10px;
+	font-weight: 800;
+	font-size: 1.7rem;
 }
 
 input {
 	height: 20px;
-	border: 2px solid #E0E2E8;
+	border: 2.5px solid #E0E2E8;
+	border-radius: 4px;
 }
 
 input:focus {
-	border: 2px solid red;
+	border: 1px solid blue;
+	outline: none;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 li {
 	display: flex;
-	flex-direction: column;
+	gap: 32px;
 	margin-top: 22px;
 	margin-right: 22px;
 	font-size: 0.9rem;
+	width: 100%;
+}
+
+li > div {
+	display: flex;
+	flex-direction: column;
 }
 
 li:first-child {
 	margin-top: 0px;
+}
+
+.footer {
+	margin-left: 32px;
+}
+
+a {
+	text-decoration: none;
+	color: forestgreen;
+}
+
+.t-c {
+	font-size: .75rem;
+	margin-left: 32px;
+}
+
+input[type="password"]:invalid {
+	border: 2px solid red;
+}
+
+p.passwd-fail-message {
+	padding: 0px;
+	margin: 0px;
+	height: 12px;
+	font-size: .65rem;
+	color: red;
 }

@@ -19,8 +19,9 @@
 
 		<div class="header">
 			<p class="inconsolata">
-				We will help you in anyway imaginable! If you need literally anything,
-				we will do it for you. Nothing is off the table. At all.
+				We will help you in anyway imaginable! If you need anything,
+				we will do it for you. No ask too big, no ask too small. We <em>will</em>
+				do anything you ask.
 			</p>
 			<p class="inconsolata">
 				Sign up now.
@@ -34,38 +35,54 @@
 		<div class="main">
 			<div class="form-container">
 				<form action="signup">
+					<p>
+						Let us know who to help:
+					</p>
+
 					<div class="inputs">
 
-						<ul class="left">
+						<ul>
 							<li>
-								<label for="first">First Name</label>
-								<input type="text" name="first" id="first">
-							</li>
-							<li>
-								<label for="email">Email Address</label>
-								<input type="email" name="email" id="email">
-							</li>
-							<li>
-								<label for="passwd">Password</label>
-								<input type="password" name="passwd" id="passwd">
-							</li>
-						</ul>
+								<div class="input-container">
+									<label for="first">First Name</label>
+									<input type="text" name="first" id="first" required>
+								</div>
 
-						<ul class="right">
-								<li>
+								<div class="input-container">
 									<label for="last">Last Name</label>
-									<input type="text" name="last" id="last">
-								</li>
-								<li>
+									<input type="text" name="last" id="last" required>
+								</div>
+							</li>
+							<li>
+								<div class="input-container">
+									<label for="email">Email Address</label>
+									<input type="email" name="email" id="email" required>
+								</div>
+
+								<div class="input-container">
 									<label for="phone-no">Phone Number</label>
-									<input type="number" name="phone-no" id="phone-no">
-								</li>
-								<li>
+									<input type="number" name="phone-no" id="phone-no" required>
+								</div>
+							</li>
+							<li>
+								<div class="input-container">
+									<label for="passwd">Password</label>
+									<input type="password" name="passwd" id="passwd" required
+									minlength=6 maxlength=20>
+									<p class="passwd-fail-message">* Passwords do not match</p>
+								</div>
+
+								<div class="input-container">
 									<label for="passwd-conf">Confirm Password</label>
-									<input type="password" name="passwd-conf" id="passwd-conf">
-								</li>
+									<input type="password" name="passwd-conf" id="passwd-conf" required
+									minlength=6 maxlength=20>
+								</div>
+							</li>
 						</ul>
 
+						<div class="t-c">
+							* All fields required.
+						</div>
 					</div>
 
 					<button type="submit">Create Account</button>
@@ -74,10 +91,12 @@
 		</div>
 
 		<div class="footer">
-
+			Already have an account? <a href="index.html">Log in</a>
 		</div>
 
 	</div>
 
+
+	<script src="script.js"></script>
 </body>
 </html>
